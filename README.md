@@ -4,6 +4,7 @@ RoutePHP é um sistema de rota leve e simples.
 ## Importação
 A primeira coisa a se fazer é baixar o **RoutePHP** e importar para seu projeto.
 Se estiver utilizando gerenciadores de dependência como o Composer, por exemplo, atualize o namespace de **RoutePHP** para um caminho correto dentro de seu projeto.
+Se não estiver, remova-o para evitar possíveis erros.
 
 ## Configuração
 A configuração de **RoutePHP** se dá pela variável` $dirBase`. Segue um projeto fictício.
@@ -23,7 +24,7 @@ A configuração de **RoutePHP** se dá pela variável` $dirBase`. Segue um proj
 		|-- vendor
 ```
 Com um projeto como acima, a variável `$dirBase` ficaria com o seguinte valor: `private $dirBase = '/nomeDoProjeto/src/view/';`
-Por motivos de organização e facilitadade, aconselhamos que todas os arquivos que sejam uma view, fiquem dentro de uma única pasta. No exemplo dado, todas ficaram dentro uma pasta `view` em `src`. Isto é uma sugestão e não lei.
+Por motivos de organização e facilidade, aconselhamos que todos os arquivos que sejam uma view, fique dentro de uma única pasta. No exemplo dado, todas as views estarão na pasta `view/src`. Isto é uma sugestão e não uma lei.
 
 ## Cadastrar Rotas
 A variável `$routes` possui todas as rotas que serão gerenciadas pela **RoutePHP**.
