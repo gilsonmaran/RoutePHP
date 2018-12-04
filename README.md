@@ -30,7 +30,7 @@ A variável `$routes` possui todas as rotas que serão gerenciadas pela **RouteP
 Para criar novas rotas, basta seguir o padrão das duas rotas de exemplo (elas não são necessárias para o funcionamento do sistema e podem ser removidas).
 
 ## Preciso imprimir o endereço da rota em uma tag <a>
-Basta na página desejada, instanciar um objeto Route e utilizar a função `print()` passando como parâmetro o 'name' da rota desejada.
+Basta na página desejada, instanciar um objeto Route e utilizar a função `print()` passando como parâmetro o `name` da rota desejada.
 ```
 $route = new Route();
 <a class="btn btn-primary" href="<?php $route->print('index'); ?>">Home</a>
@@ -38,7 +38,7 @@ $route = new Route();
 Na verdade, a função `print()` imprime o endereço em qualquer tag.
   
 ## Preciso redirecionar a página
-Quando não se precisa imprimir a rota, podemos realizar um redirect diretamente utilizando a função `redirect()` e passando o 'name' da rota. Exemplo: `$route->redirect('produtos');`
+Quando não se precisa imprimir a rota, podemos realizar um redirect diretamente utilizando a função `redirect()` e passando o `name` da rota. Exemplo: `$route->redirect('produtos');`
 Neste caso o redirecionamento ocorrerrá automaticamente.
 
 ## Page 404
@@ -52,5 +52,5 @@ $route->add( ['name'=>'vendas', 'view'=>'adm/vendas.php'] );
 Esta rota não é permanente e ficará disponível até que ocorra um redicionamento. Logo após a mesma é perdida.
 
 ## Implemetações Futuras
-- [ ] Adicionar variáveis nas passagens de parâmetros. **Ex:** ´$route->redirect('produto/$id')´
+- [ ] Adicionar variáveis nas passagens de parâmetros. **Ex:** `$route->redirect('produto/$id')`
 - [ ] Aceitar cache para melhorar performance
