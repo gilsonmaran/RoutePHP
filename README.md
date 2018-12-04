@@ -25,20 +25,19 @@ A configuração de **RoutePHP** se dá pela variável` $dirBase`. Segue um proj
 Com um projeto como acima, a variável `$dirBase` ficaria com o seguinte valor: `private $dirBase = '/nomeDoProjeto/src/view/';`
 Por motivos de organização e facilitadade, aconselhamos que todas os arquivos que sejam uma view, fiquem dentro de uma única pasta. No exemplo dado, todas ficaram dentro uma pasta `view` em `src`. Isto é uma sugestão e não lei.
 
-## Cadastrar as Rotas
+## Cadastrar Rotas
 A variável `$routes` possui todas as rotas que serão gerenciadas pela **RoutePHP**.
 Para criar novas rotas, basta seguir o padrão das duas rotas de exemplo (elas não são necessárias para o funcionamento do sistema e podem ser removidas).
 
-## Preciso imprimir o endereço da rota em uma tag <a>
-Basta na página desejada, instanciar um objeto Route e utilizar a função `print()` passando como parâmetro o `name` da rota desejada.
+## Imprimir endereço de rota
+Basta na página desejada, instanciar um objeto **Route** e utilizar a função `print()` passando como parâmetro o `name` da rota desejada.
 ```
 $route = new Route();
-<a class="btn btn-primary" href="<?php $route->print('index'); ?>">Home</a>
+<a href="<?php $route->print('index'); ?>">Home</a>
 ```
-Na verdade, a função `print()` imprime o endereço em qualquer tag.
   
-## Preciso redirecionar a página
-Quando não se precisa imprimir a rota, podemos realizar um redirect diretamente utilizando a função `redirect()` e passando o `name` da rota. Exemplo: `$route->redirect('produtos');`
+## Redirecionar página
+Quando não se precisa imprimir a rota, podemos realizar um redirect diretamente utilizando a função `redirect()`, passando o `name` da rota. **Exemplo:** `$route->redirect('produtos');`
 Neste caso o redirecionamento ocorrerrá automaticamente.
 
 ## Page 404
@@ -52,5 +51,6 @@ $route->add( ['name'=>'vendas', 'view'=>'adm/vendas.php'] );
 Esta rota não é permanente e ficará disponível até que ocorra um redicionamento. Logo após a mesma é perdida.
 
 ## Implemetações Futuras
+- [ ] Tratar requisições GET, POST, PUT e DELETE.
 - [ ] Adicionar variáveis nas passagens de parâmetros. **Ex:** `$route->redirect('produto/$id')`
 - [ ] Aceitar cache para melhorar performance
