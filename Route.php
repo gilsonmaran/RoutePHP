@@ -4,8 +4,8 @@ namespace Route;
 
 class Route {
 
-      private $dirBase = '/vocacional/src/view/';
-      private $notFound = '404.php';
+      private $dirBase = '';
+      private $notFound = '';
       private $countRoutes = 0;
 
       public function __construct() {
