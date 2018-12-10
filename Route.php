@@ -1,5 +1,10 @@
 <?php
 
+/*
+ * @author Gilson José Maran
+ * @version 1.1
+ */
+
 namespace Route;
 
 class Route {
